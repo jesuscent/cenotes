@@ -1,3 +1,11 @@
+# If produce an error in the proyect
+ you must execute the next command in the console `npm install` for solution the error of Could not find module "@angular-devkit/build-angular"
+# To create a component
+*option 1*´
+`ng generate componet name-component --spec=false`
+*option 2*
+`g c name-component --spec=false`
+
 # Cenotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
