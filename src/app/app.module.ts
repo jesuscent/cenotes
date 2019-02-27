@@ -19,6 +19,7 @@ import { ConfiguracionComponent } from './componentes/configuracion/configuracio
 import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado.component';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
 import { from } from 'rxjs';
+import { RutasComponent } from './componentes/rutas/rutas.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { from } from 'rxjs';
     ConfiguracionComponent,
     NoEncontradoComponent,
     CabeceroComponent,
+    RutasComponent,
     
   ],
   imports: [
