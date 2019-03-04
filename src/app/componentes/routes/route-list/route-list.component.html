@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <thead>
+    <th>Name of a Route</th>
+    <th>Name of a Cenote</th>
+    <th>Cenote input</th>
+    <th>Services</th>
+    <th>Schedule</th>
+    <th>How to Get?</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rou of list">
+      <td (click)="onEdit(rou)">{{rou.name_route}}</td>
+      <td (click)="onEdit(rou)">{{rou.cenote_name}}</td>
+      <td (click)="onEdit(rou)">{{rou.cenote_input}}</td>
+      <td (click)="onEdit(rou)">{{rou.cenote_services}}</td>
+      <td (click)="onEdit(rou)">{{rou.cenote_schedule}}</td>
+      <td (click)="onEdit(rou)">{{rou.how_to_get}}</td>
+      <td><a class="btn text-danger" (click)="onDelete(rou.id)"><i class="fa fa-trash"></i></a></td>
+    </tr>
+  </tbody>
+</table>

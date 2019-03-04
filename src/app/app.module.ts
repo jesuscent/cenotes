@@ -5,10 +5,13 @@ import { NgModule } from '@angular/core';
 //importacion de libreria de firebase 
 import { environment } from '../environments/environment';
 import{AngularFireModule} from '@angular/fire';
-import{AngularFirestoreModule, FirestoreSettingsToken} from'@angular/fire/firestore';
+import{AngularFirestoreModule} from'@angular/fire/firestore';
 import{AngularFireAuthModule} from'@angular/fire/auth';
 import {FlashMessagesModule } from 'angular2-flash-messages';
 import{FormsModule} from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,8 +21,10 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { ConfiguracionComponent } from './componentes/configuracion/configuracion.component';
 import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado.component';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
-import { from } from 'rxjs';
-import { RutasComponent } from './componentes/rutas/rutas.component';
+import { RoutesComponent } from './componentes/routes/routes.component';
+import { RouteComponent } from './componentes/routes/route/route.component';
+import { RouteListComponent } from './componentes/routes/route-list/route-list.component';
+import { RouteService } from './shared/route.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,9 @@ import { RutasComponent } from './componentes/rutas/rutas.component';
     ConfiguracionComponent,
     NoEncontradoComponent,
     CabeceroComponent,
-    RutasComponent,
+    RoutesComponent,
+    RouteComponent,
+    RouteListComponent,
     
   ],
   imports: [
@@ -38,10 +45,12 @@ import { RutasComponent } from './componentes/rutas/rutas.component';
     AngularFireModule.initializeApp(environment.firestore,'cenotes'),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    BrowserAnimationsModule,
     FormsModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    ToastrModule.forRoot()
   ],
-  providers: [LoginService],
+  providers: [LoginService, RouteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

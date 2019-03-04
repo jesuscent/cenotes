@@ -3,11 +3,11 @@ import { LoginService } from 'src/app/servicios/login.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-rutas',
-  templateUrl: './rutas.component.html',
-  styleUrls: ['./rutas.component.css']
+  selector: 'app-routes',
+  templateUrl: './routes.component.html',
+  styleUrls: ['./routes.component.css']
 })
-export class RutasComponent implements OnInit {
+export class RoutesComponent implements OnInit {
 
   isLoggedIn: boolean;
   loggedInUser: string;
@@ -16,7 +16,6 @@ export class RutasComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private router: Router,
-    
   ) { }
 
   ngOnInit() {
@@ -29,8 +28,6 @@ export class RutasComponent implements OnInit {
         this.isLoggedIn = false;
       }
     });
-
-  
   }
 
   logout(){
@@ -38,6 +35,5 @@ export class RutasComponent implements OnInit {
     this.isLoggedIn = false;
     this.router.navigate(['/login']);
   }
-
 
 }
