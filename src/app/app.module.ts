@@ -1,4 +1,4 @@
-import { LoginService } from './servicios/login.service';
+import { LoginService } from './services/login.service';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,26 +17,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //importacion de los componentes a usar
 import { LoginComponent } from './componentes/login/login.component';
-import { RegistroComponent } from './componentes/registro/registro.component';
-import { ConfiguracionComponent } from './componentes/configuracion/configuracion.component';
 import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado.component';
-import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
+
 import { RoutesComponent } from './componentes/routes/routes.component';
 import { RouteComponent } from './componentes/routes/route/route.component';
 import { RouteListComponent } from './componentes/routes/route-list/route-list.component';
 import { RouteService } from './shared/route.service';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { AuthGuard } from './componentes/guardians/auth.guard';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegistroComponent,
-    ConfiguracionComponent,
-    NoEncontradoComponent,
-    CabeceroComponent,
+    LoginComponent,   
+    NoEncontradoComponent,   
     RoutesComponent,
     RouteComponent,
     RouteListComponent,
+    DashboardComponent,
+    HomeComponent,
     
   ],
   imports: [
@@ -50,7 +51,8 @@ import { RouteService } from './shared/route.service';
     FlashMessagesModule.forRoot(),
     ToastrModule.forRoot()
   ],
-  providers: [LoginService, RouteService],
+  
+  providers: [LoginService, RouteService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

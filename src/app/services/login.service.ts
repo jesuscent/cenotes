@@ -14,11 +14,12 @@ export class LoginService{
             )
         })
     }
+    //method to obtain the logged in user
     getAuth(){
         return this.authService.authState.pipe(map( auth => auth)
         );
     }
-
+//method to close session
     logout(){
         this.authService.auth.signOut();
     }

@@ -1,8 +1,9 @@
 
-import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { LoginService } from 'src/app/servicios/login.service';
+import { LoginService } from 'src/app/services/login.service';
+import { OnInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ import { LoginService } from 'src/app/servicios/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  //declacion de variables 
   email:string;
   password:string;
 
@@ -21,17 +23,18 @@ export class LoginComponent implements OnInit {
 ) { }
 
 ngOnInit() {
+// 
 this.loginService.getAuth().subscribe(auth => {
 if(auth){
 this.router.navigate(['/']);
 }
 })
 }
-
+//Validation method of email and password fields
 login(){
 this.loginService.login(this.email, this.password)
 .then( res => {
-this.router.navigate(['/']);
+this.router.navigate(['/home']);
 })
 .catch(error =>{
 this.flashMessages.show(error.message, {

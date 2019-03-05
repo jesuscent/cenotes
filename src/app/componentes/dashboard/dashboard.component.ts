@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/servicios/login.service';
 import { Router } from '@angular/router';
-
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
-  selector: 'app-cabecero',
-  templateUrl: './cabecero.component.html',
-  styleUrls: ['./cabecero.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class CabeceroComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   isLoggedIn: boolean;
   loggedInUser: string;
@@ -39,6 +38,4 @@ export class CabeceroComponent implements OnInit {
     this.isLoggedIn = false;
     this.router.navigate(['/login']);
   }
-
-
 }

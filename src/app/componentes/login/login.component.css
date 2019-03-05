@@ -1,0 +1,41 @@
+#logincenter{
+    margin-left: 30%;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    
+    
+    }
+    #btnlogin{
+       
+        margin-left: 13%;
+        padding-top:2px; 
+        
+        }
+    
+    .backg{
+    background-image: url("/assets/images/790.jpg");
+    background-size: cover;
+    }
+    
+    #btntext{
+        text-align: center;
+        padding: 15PX;
+        font-size: 20PX;
+        
+        
+    }
+    #iconlogin{
+        font-size:100px;
+        margin:auto;
+        
+    }
+    #nom{
+        text-align: center;   
+        margin:auto;
+        color: rgb(15, 112, 223);
+    }
+    footer{
+       width: auto;
+       height: 100px;
+    }
