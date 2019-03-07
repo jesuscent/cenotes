@@ -1,0 +1,38 @@
+
+<!-- Botones -->
+<a class="waves-effect waves-light modal-trigger btn blue darken-4 text-white"  routerLink="/addCenote"><i class="material-icons left">add</i>Agregar</a>
+
+
+<!-- Tabla de listado de datos-->
+<section id="cenotes">
+  <table class="ml-4 mr-5">
+    <thead>
+      <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Average people</th>
+          <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let cenote of list">
+        <td></td>
+        <td (click)="onEdit(cenote)">{{cenote.name}}</td>
+        <td (click)="onEdit(cenote)">{{cenote.averagePeople}}</td>
+        <td (click)="onEdit(cenote)">{{cenote.location}}</td>
+        <td>
+
+            <a class="btn-floating btn-large waves-effect waves-light" routwe><i class="material-icons">edit</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light red darken-3" (click)="onDelete(cenote.id)"><i class="material-icons">delete</i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+

@@ -1,0 +1,116 @@
+<div class="ml-4 mr-5">
+  <form class="col s4" #cenoteForm="ngForm" autocomplete="off" (ngSubmit)="onSubmint(cenoteForm)">
+    <div class="row">
+        <div class="input-field col s6">
+            <input name="name" type="text" class="form-control" #name="ngModel" [(ngModel)]="cenoteService.formData.name"  required >
+            <label for="name">Cenote's name:</label>
+
+          </div>
+      <div class="input-field col s6">
+        <input name="manager" type="text" class="validate" #manager="ngModel" [(ngModel)]="cenoteService.formData.manager" required>
+        <label for="manager">Manager:</label>
+        <div *ngIf="name.invalid && name.touched" class="validation-error">This field is required</div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input name="schedule" type="text" class="validate" #schedule="ngModel" [(ngModel)]="cenoteService.formData.schedule" required >
+            <label for="schedule">Schedule:</label>
+            <div *ngIf="name.invalid && name.touched" class="validation-error">This field is required</div>
+          </div>
+          <div class="input-field col s6">
+              <input name="averagePeople" type="number" class="validate" #number="ngModel" [(ngModel)]="cenoteService.formData.number" required>
+              <label for="averagePeople">Average People:</label>
+              <div *ngIf="name.invalid && name.touched" class="validation-error">This field is required</div>
+            </div>
+
+    </div>
+    <h1>SERVICIOS</h1>
+    <div class="row">
+
+      <div class="input-field col s6">
+          <input name="service_1" type="text" class="validate" #service_1="ngModel" [(ngModel)]="cenoteService.formData.sevice_1" required >
+          <label for="service_1">Service:</label>
+          <div *ngIf="service_1.invalid && service_1.touched" class="validation-error">This field is required</div>
+        </div>
+        <div class="input-field col s6">
+            <input name="price_1" type="number" class="validate" #price_1="ngModel" [(ngModel)]="cenoteService.formData.price_1" required>
+            <label for="price_1">Price:</label>
+            <div *ngIf="price_1.invalid && price_1.touched" class="validation-error">This field is required</div>
+          </div>
+
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+        <input name="service_2" type="text" class="validate" #schedule="ngModel" [(ngModel)]="cenoteService.formData.service_2" required >
+        <label for="service_2">Service:</label>
+        <div *ngIf="service_2.invalid && service_2.touched" class="validation-error">This field is required</div>
+      </div>
+      <div class="input-field col s6">
+          <input name="price_2" type="number" class="validate" #number="ngModel" [(ngModel)]="cenoteService.formData.price_2" required>
+          <label for="price_2">Price:</label>
+          <div *ngIf="price_2.invalid && price_2.touched" class="validation-error">This field is required</div>
+        </div>
+
+</div>
+<div class="row">
+  <div class="input-field col s6">
+      <input name="service_3" type="text" class="validate" #schedule="ngModel" [(ngModel)]="cenoteService.formData.service_3" required >
+      <label for="service_3">Service:</label>
+      <div *ngIf="service_3.invalid && service_3.touched" class="validation-error">This field is required</div>
+    </div>
+    <div class="input-field col s6">
+        <input name="price_3" type="number" class="validate" #number="ngModel" [(ngModel)]="cenoteService.formData.price_3" required>
+        <label for="price_3">Price:</label>
+        <div *ngIf="price_3.invalid && price_3.touched" class="validation-error">This field is required</div>
+      </div>
+
+</div>
+<div class="row">
+  <div class="input-field col s6">
+      <input name="service_4" type="text" class="validate" #schedule="ngModel" [(ngModel)]="cenoteService.formData.service_4" required >
+      <label for="service_4">Service:</label>
+      <div *ngIf="service_4.invalid && service_4.touched" class="validation-error">This field is required</div>
+    </div>
+    <div class="input-field col s6">
+        <input name="price_4" type="number" class="validate" #number="ngModel" [(ngModel)]="cenoteService.formData.price_4" required>
+        <label for="price_4">Price:</label>
+        <div *ngIf="price_4.invalid && price_4.touched" class="validation-error">This field is required</div>
+      </div>
+
+</div>
+<div class="row">
+  <div class="input-field col s6">
+      <input name="service_5" type="text" class="validate" #schedule="ngModel" [(ngModel)]="cenoteService.formData.service_5" required >
+      <label for="service_5">Service:</label>
+      <div *ngIf="service_5.invalid && service_5.touched" class="validation-error">This field is required</div>
+    </div>
+    <div class="input-field col s6">
+        <input name="price_5" type="number" class="validate" #number="ngModel" [(ngModel)]="cenoteService.formData.price_5" required>
+        <label for="price_5">Price:</label>
+        <div *ngIf="price_5.invalid && price_5.touched" class="validation-error">This field is required</div>
+      </div>
+
+</div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input name="location" type="text" class="validate" #location="ngModel" [(ngModel)]="cenoteService.formData.location">
+            <label for="location">Location:</label>
+            <div *ngIf="name.invalid && name.touched" class="validation-error">This field is required</div>
+          </div>
+      <div class="input-field col s6">
+          <div class="file-field input-field">
+              <div class="btn-floating ">
+                  <i class="material-icons">vertical_align_bottom</i>
+                <input type="file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+      </div>
+    </div>
+    <button class="waves-effect waves-light btn" type="submit" [disabled]="form.invalid" name="action">Submit</button>
+    <a class="waves-effect waves-light modal-trigger btn blue darken-4 text-white"  routerLink="/cenotes"><i class="material-icons left"></i>Return</a>
+  </form>
+</div>
