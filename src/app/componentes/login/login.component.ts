@@ -34,7 +34,7 @@ this.router.navigate(['/']);
 login(){
 this.loginService.login(this.email, this.password)
 .then( res => {
-this.router.navigate(['/home']);
+this.router.navigate(['/dashboard']);
 })
 .catch(error =>{
 this.flashMessages.show(error.message, {

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CenoteService } from 'src/app/servicios/cenote.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
+import { CenoteService } from 'src/app/servicios/cenote.service';
+
 
 @Component({
   selector: 'app-add-cenote',
@@ -10,7 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AddCenoteComponent implements OnInit {
 
-  constructor(private cenoteService : CenoteService, private firestore : AngularFirestore) { }
+  constructor(private cenoteService: CenoteService, private firestore : AngularFirestore) { }
 
   ngOnInit() {
     this.resetForm();
