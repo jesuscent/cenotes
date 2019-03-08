@@ -17,16 +17,17 @@ const routes: Routes = [
   //Rutas para componentes
   {path:'',component: HomeComponent},
   {path:'dashboard',component: DashboardComponent,canActivate: [AuthGuard]},
-  {path: 'login', component: LoginComponent},   
-  {path: 'routes', component: RoutesComponent,canActivate: [AuthGuard]}, 
+  {path: 'login', component: LoginComponent},
+  {path: 'routes', component: RoutesComponent,canActivate: [AuthGuard]},
+  {path: 'cenotes', component: CenotesComponent,canActivate: [AuthGuard]},
+  {path: 'addCenote', component: AddCenoteComponent,canActivate: [AuthGuard]},
   {path: '**', component: NoEncontradoComponent,canActivate: [AuthGuard]},
  // {path: '', component: CabeceroComponent},
   {path: 'login', component: LoginComponent},
   //{path: 'registrarse', component: RegistroComponent},
  // {path: 'configuracion', component: ConfiguracionComponent},
   //{path: 'rutas', component: RutasComponent},
-  {path: 'cenotes', component: CenotesComponent,canActivate: [AuthGuard]},
-  {path: 'addCenote', component: AddCenoteComponent,canActivate: [AuthGuard]},
+
   {path: '**', component: NoEncontradoComponent},
 ];
 
