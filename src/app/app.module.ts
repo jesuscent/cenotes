@@ -18,8 +18,6 @@ import { AppComponent } from './app.component';
 //importacion de los componentes a usar
 import { LoginComponent } from './componentes/login/login.component';
 import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado.component';
-import { RoutesComponent } from './componentes/routes/routes.component';
-import { RouteListComponent } from './componentes/routes/route-list/route-list.component';
 import { RouteService } from './shared/route.service';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { HomeComponent } from './componentes/home/home.component';
@@ -29,6 +27,9 @@ import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.componen
 
 import { AddCenoteComponent } from './componentes/add-cenote/add-cenote.component';
 import { CenoteService } from './servicios/cenote.service';
+import { RoutesComponent } from './componentes/routes/routes.component';
+import { DetailsRouteComponent } from './componentes/details-route/details-route.component';
+import { ListRoutesComponent } from './componentes/list-routes/list-routes.component';
 
 
 @NgModule({
@@ -36,15 +37,15 @@ import { CenoteService } from './servicios/cenote.service';
     //Todos los componentes
     AppComponent,
     LoginComponent,   
-    NoEncontradoComponent,   
-    RoutesComponent,
-    RouteListComponent,
+    NoEncontradoComponent,
     DashboardComponent,
     HomeComponent, 
     CenotesComponent,
     PiePaginaComponent,
     AddCenoteComponent,
-
+    RoutesComponent,
+    DetailsRouteComponent,
+    ListRoutesComponent,
   ],
   imports: [
     BrowserModule,
