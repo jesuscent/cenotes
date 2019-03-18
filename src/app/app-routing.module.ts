@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'dashboard',component: DashboardComponent,canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
-  {path: 'routes', component: RoutesComponent,canActivate: [AuthGuard]},
+  {path: 'addRoute', component: RoutesComponent,canActivate: [AuthGuard]},
   {path: 'cenotes', component: CenotesComponent,canActivate: [AuthGuard]},
   {path: 'addCenote', component: AddCenoteComponent,canActivate: [AuthGuard]},
   {path: '**', component: NoEncontradoComponent,canActivate: [AuthGuard]},
